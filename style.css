@@ -119,40 +119,76 @@ body {
 
 .card-one {
   border-top: 3px solid hsl(180, 62%, 55%);
+  width: 100%;
+  border-radius: 5px;
+  box-shadow: 0px 9px 13px rgb(163 165 174 / 50%);
+  padding: 3%;
+  margin-bottom: 2rem;
 }
 
 .icon-one {
   background-image: url("./images/icon-supervisor.svg");
+  width: 4rem;
+  height: 4rem;
+  background-size: cover;
+  background-position: center;
 }
 
 /*  CARD TWO */
 
 .card-two {
   border-top: 3px solid hsl(0, 78%, 62%);
+  width: 100%;
+  border-radius: 5px;
+  box-shadow: 0px 9px 13px rgb(163 165 174 / 50%);
+  padding: 3%;
+  margin-bottom: 2rem;
 }
 
 .icon-two {
   background-image: url("./images/icon-team-builder.svg");
+  width: 4rem;
+  height: 4rem;
+  background-size: cover;
+  background-position: center;
 }
 
 /*  CARD THREE */
 
 .card-three {
   border-top: 3px solid hsl(34, 97%, 64%);
+  width: 100%;
+  border-radius: 5px;
+  box-shadow: 0px 9px 13px rgb(163 165 174 / 50%);
+  padding: 3%;
+  margin-bottom: 2rem;
 }
 
 .icon-three {
   background-image: url("./images/icon-karma.svg");
+  width: 4rem;
+  height: 4rem;
+  background-size: cover;
+  background-position: center;
 }
 
 /*  CARD FOUR */
 
 .card-four {
   border-top: 3px solid hsl(212, 86%, 64%);
+  width: 100%;
+  border-radius: 5px;
+  box-shadow: 0px 9px 13px rgb(163 165 174 / 50%);
+  padding: 3%;
+  margin-bottom: 2rem;
 }
 
 .icon-four {
   background-image: url("./images/icon-calculator.svg");
+  width: 4rem;
+  height: 4rem;
+  background-size: cover;
+  background-position: center;
 }
 
 /* MEDIA QUERY  */
@@ -166,29 +202,28 @@ body {
   }
   /* do I need a grid? */
 
-  .card-one {
+  .main-card-one {
     grid-area: "supervisor";
   }
 
-  .card-two {
+  .main-card-two {
     grid-area: "team-builder";
   }
 
-  .card-three {
+  .main-card-three {
     grid-area: "karma";
   }
 
-  .card-four {
+  .main-card-four {
     grid-area: "calculator";
   }
 
   .wrapper-main {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: auto;
-    grid-template-areas: ".  team-builder  .",
-      "supervisor  team-builder  calculator", "supervisor  karma  calculator",
-      ".  supervisor  .";
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-template-areas: "supervisor supervisor supervisor ",
+      "supervisor supervisor supervisor ", "supervisor supervisor supervisor ";
 
     grid-gap: 4rem;
   }
