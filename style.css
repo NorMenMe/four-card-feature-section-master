@@ -24,6 +24,10 @@ body {
   /* outline: 2px solid red; */
 }
 
+.larger-devices {
+  display: none;
+}
+
 .container-statement {
   width: 100%;
   /* outline: 2px solid red; */
@@ -193,38 +197,36 @@ body {
 
 /* MEDIA QUERY  */
 
+/* Extra small devices (portrait phones, less than 576px) */
+@media (max-width: 575.98px) {
+  .card p {
+    width: 100%;
+  }
+}
+
 /* Large devices (desktops, 375px and up) */
 @media (min-width: 375px) {
-  .wrapper-header {
-    width: 45%;
-    margin: 0 auto;
-    outline: 2px solid red;
-  }
-  /* do I need a grid? */
-
-  .main-card-one {
-    grid-area: "supervisor";
+  .smaller-devices {
+    display: none;
   }
 
-  .main-card-two {
-    grid-area: "team-builder";
-  }
-
-  .main-card-three {
-    grid-area: "karma";
-  }
-
-  .main-card-four {
-    grid-area: "calculator";
+  .larger-devices {
+    display: flex;
+    flex-direction: row;
+    justify-content: center; /* outline: 1px solid red; */
   }
 
   .wrapper-main {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr 1fr;
-    grid-template-areas: "supervisor supervisor supervisor ",
-      "supervisor supervisor supervisor ", "supervisor supervisor supervisor ";
+    width: 703px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    /* outline: 1px solid red; */
+  }
 
-    grid-gap: 4rem;
+  .center-column {
+    display: flex;
+    flex-direction: column;
+    margin: 0 3rem;
   }
 }
